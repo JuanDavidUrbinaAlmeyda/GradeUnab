@@ -4,4 +4,13 @@
     <string name="txtPassword">Password</string>
     <string name="txtLogin">LOGIN</string>
     <string name="txtBienvenido">Bienvenido</string>
+    <string name="txtApellidosProf">Apellidos:</string>
+    <string name="txtNameProf">Nombre:</string>
+    <string name="txtIDProf">ID:</string>
+    <string name="txtCarreraProf">Carrera:</string>
+    <string name="txtSemestreProf">Semestre:</string>
+    <string name="txtCorreoProf">Correo:</string>
+    <string name="txtCreditos">CREDITOS</string>
+    <string name="txtGradeUnab">GRADEUNAB</string>
+    <string name="txtAutores">Autores</string>
 </resources>
