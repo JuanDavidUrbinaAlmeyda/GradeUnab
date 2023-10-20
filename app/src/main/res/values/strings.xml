@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">GradeUnab</string>
+    <string name="txtUser">User</string>
+    <string name="txtPassword">Password</string>
+    <string name="txtLogin">LOGIN</string>
+    <string name="txtBienvenido">Bienvenido</string>
 </resources>
