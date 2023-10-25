@@ -6,4 +6,125 @@
     android:layout_height="match_parent"
     tools:context=".GradesActivity">
 
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:text="Materia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/aleo_bold"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="125dp"
+        android:text="@string/txtPGA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/aleo_bold"
+        android:textSize="18sp"
+        android:textColor="@color/secundario"/>
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="125dp"
+        android:text="PGA-Materia"
+        app:layout_constraintStart_toEndOf="@+id/textView22"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="18sp"
+        android:fontFamily="@font/aleo_bold"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/btnDisplayNotas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/txtNotas"
+        app:layout_constraintEnd_toStartOf="@+id/btnDisplayTasks"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22"
+        android:fontFamily="@font/aleo_bold"
+        android:textSize="15sp"
+        android:backgroundTint="@color/secundario"
+        />
+
+    <Button
+        android:id="@+id/btnDisplayTasks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/txtTasks"
+        app:layout_constraintEnd_toStartOf="@+id/btnDisplayResour"
+        app:layout_constraintStart_toEndOf="@+id/btnDisplayNotas"
+        app:layout_constraintTop_toBottomOf="@+id/textView23"
+        android:fontFamily="@font/aleo_bold"
+        android:textSize="15sp"
+        android:backgroundTint="@color/secundario"/>
+
+    <Button
+        android:id="@+id/btnDisplayResour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="177dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="@color/secundario"
+        android:fontFamily="@font/aleo_bold"
+        android:text="Info"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnDisplayTasks"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGrades"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDisplayResour" />
+
+    <Button
+        android:id="@+id/btnAñadirNota"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/secundario"
+        android:text="@string/txtPlus"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvGrades" />
+    <Button
+        android:id="@+id/btnBackGrades"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="end"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        app:icon="@android:drawable/ic_menu_revert"
+        app:iconGravity="textEnd"
+        app:iconPadding="0dp"
+        app:iconSize="35dp"
+        app:iconTint="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

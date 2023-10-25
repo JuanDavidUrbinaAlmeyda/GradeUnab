@@ -20,7 +20,7 @@
         android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnBackCredits"
+        app:layout_constraintStart_toEndOf="@+id/btnBackAddGrad"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -310,7 +310,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/btnBackCredits"
+        android:id="@+id/btnBackAddGrad"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_gravity="end"

@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button btnCuenta=findViewById(R.id.btnCuenta);
-        Button btnBackMain= findViewById(R.id.btnBackCredits);
+        Button btnBackMain= findViewById(R.id.btnBackMain);
         Button btnCredits= findViewById(R.id.btnCreditos);
         Button btnAddSub= findViewById(R.id.btnAñadirMateria);
         btnCuenta.setOnClickListener(new View.OnClickListener() {

@@ -13,4 +13,14 @@
     <string name="txtCreditos">CREDITOS</string>
     <string name="txtGradeUnab">GRADEUNAB</string>
     <string name="txtAutores">Autores</string>
+    <string name="txtAddSub">Añadir Materia</string>
+    <string name="txtAdd">Añadir</string>
+    <string name="txtAddGrad">Añadir Nota</string>
+    <string name="txtGradeName">Nombre de la Nota</string>
+    <string name="txtGradePercen">Porcentaje en la Materia</string>
+    <string name="txtGradeCal">Calificación</string>
+    <string name="txtPlus">+</string>
+    <string name="txtPGA">PGA:</string>
+    <string name="txtNotas">Notas</string>
+    <string name="txtTasks">Tareas</string>
 </resources>

@@ -32,7 +32,7 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/btnBackCredits"
+                android:id="@+id/btnBackMain"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="end"
@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/aleo_bold"
-            android:text="PGA:"
+            android:text="@string/txtPGA"
             android:textColor="@color/terciario"
             android:textSize="18dp" />
 

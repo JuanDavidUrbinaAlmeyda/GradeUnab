@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnBackCredits"
+        android:id="@+id/btnBackAddGrad"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_gravity="end"
