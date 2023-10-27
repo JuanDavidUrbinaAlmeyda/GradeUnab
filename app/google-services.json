@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "163828261176",
+    "project_id": "gradeunab",
+    "storage_bucket": "gradeunab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163828261176:android:b8fbcab2e5fd1e632aa1cd",
+        "android_client_info": {
+          "package_name": "com.juanurbina.gradeunab"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGKyMJKtG3BmsPMTPU0blALA6wHhpLNAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
