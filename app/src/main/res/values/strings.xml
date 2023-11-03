@@ -23,4 +23,10 @@
     <string name="txtPGA">PGA:</string>
     <string name="txtNotas">Notas</string>
     <string name="txtTasks">Tareas</string>
+    <string name="txtRecordatorios">Recordatorios</string>
+    <string name="txtNameReminder">Nombre del Recordatorio</string>
+    <string name="txtTextReminder">Texto del Recordatorio</string>
+    <string name="txtAddRemin">Añadir Recordatorio</string>
+    <string name="txtResources">Recursos</string>
+    <string name="txtBackMenu">Volver a Inicio</string>
 </resources>

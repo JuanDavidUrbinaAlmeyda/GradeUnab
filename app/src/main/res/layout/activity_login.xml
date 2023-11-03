@@ -77,19 +77,19 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputEditText2" />
 
 
-
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textInputEditText"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="41dp"
+            android:fontFamily="@font/aleo_bold"
             android:hint=""
+            android:singleLine="false"
+            android:textColor="@color/black"
+            android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3"
-            android:textSize="20dp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/aleo_bold"/>
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <Button
             android:id="@+id/btnLogin"

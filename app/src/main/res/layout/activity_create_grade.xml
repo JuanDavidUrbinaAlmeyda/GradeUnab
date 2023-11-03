@@ -29,12 +29,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView16">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNameGrade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/txtGradeName"
             android:fontFamily="@font/aleo_bold"
-            android:textSize="18sp"
-            android:textColor="@color/terciario"/>
+            android:hint="@string/txtGradeName"
+            android:textColor="@color/terciario"
+            android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -47,12 +48,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout11">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPercenGrade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/txtGradePercen"
             android:fontFamily="@font/aleo_bold"
-            android:textSize="18sp"
-            android:textColor="@color/terciario"/>
+            android:hint="@string/txtGradePercen"
+            android:textColor="@color/terciario"
+            android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -65,12 +67,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout12">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCalifGrade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/txtGradeCal"
             android:fontFamily="@font/aleo_bold"
-            android:textSize="18sp"
-            android:textColor="@color/terciario"/>
+            android:hint="@string/txtGradeCal"
+            android:textColor="@color/terciario"
+            android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
