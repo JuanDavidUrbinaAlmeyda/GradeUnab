@@ -64,11 +64,12 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRegName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nombre"
                 android:fontFamily="@font/aleo_bold"
-                android:textSize="18dp"/>
+                android:hint="Nombre"
+                android:textSize="18dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -81,11 +82,12 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRegLastName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Apellido"
                 android:fontFamily="@font/aleo_bold"
-                android:textSize="18dp"/>
+                android:hint="Apellido"
+                android:textSize="18dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -98,11 +100,12 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRegId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="ID"
                 android:fontFamily="@font/aleo_bold"
-                android:textSize="18dp"/>
+                android:hint="ID"
+                android:textSize="18dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -115,11 +118,12 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRegCareer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Carrera"
                 android:fontFamily="@font/aleo_bold"
-                android:textSize="18dp"/>
+                android:hint="Carrera"
+                android:textSize="18dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -132,11 +136,12 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRegSem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Semestre"
                 android:fontFamily="@font/aleo_bold"
-                android:textSize="18dp"/>
+                android:hint="Semestre"
+                android:textSize="18dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -149,11 +154,12 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRegEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Correo"
                 android:fontFamily="@font/aleo_bold"
-                android:textSize="18dp"/>
+                android:hint="Correo"
+                android:textSize="18dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -166,11 +172,12 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout6">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRegPass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Contraseña"
                 android:fontFamily="@font/aleo_bold"
-                android:textSize="18dp"/>
+                android:hint="Contraseña"
+                android:textSize="18dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -183,11 +190,12 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout7">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRegRepPass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Repetir Contraseña"
                 android:fontFamily="@font/aleo_bold"
-                android:textSize="18dp"/>
+                android:hint="Repetir Contraseña"
+                android:textSize="18dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button

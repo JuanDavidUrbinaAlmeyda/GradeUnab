@@ -43,7 +43,7 @@ public class GradesActivity extends AppCompatActivity {
         rvNota.setLayoutManager(new LinearLayoutManager(GradesActivity.this));
         Button btnBackGrades=findViewById(R.id.btnBackGrades);
         Button btnAddGrade= findViewById(R.id.btnAñadirNota);
-        Button btnReminders= findViewById(R.id.btnDisplayResour);
+        Button btnReminders= findViewById(R.id.btnDisplayTasks);
         Button btnResources= findViewById(R.id.btnDisplayResour);
         btnBackGrades.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +64,13 @@ public class GradesActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent myIntent3= new Intent(GradesActivity.this, RemindersActivity.class);
                 startActivity(myIntent3);
+            }
+        });
+        btnResources.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent4= new Intent(GradesActivity.this, ResourcesActivity.class);
+                startActivity(myIntent4);
             }
         });
 

@@ -35,7 +35,9 @@
             android:exported="false" />
         <activity
             android:name=".GradesActivity"
-            android:exported="false" />
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />
