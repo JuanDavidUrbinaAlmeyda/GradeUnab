@@ -5,6 +5,22 @@ public class Nota {
     private String idNota;
     private double porcNota;
     private double califNota;
+    private String idMateria;
+
+    public Nota(String nombreNota, double porcNota, double califNota, String idMateria) {
+        this.nombreNota = nombreNota;
+        this.porcNota = porcNota;
+        this.califNota = califNota;
+        this.idMateria = idMateria;
+    }
+
+    public String getIdMateria() {
+        return idMateria;
+    }
+
+    public void setIdMateria(String idMateria) {
+        this.idMateria = idMateria;
+    }
 
     public String getNombreNota() {
         return nombreNota;

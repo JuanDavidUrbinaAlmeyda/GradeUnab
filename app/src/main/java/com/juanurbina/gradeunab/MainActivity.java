@@ -23,14 +23,14 @@ public class MainActivity extends AppCompatActivity {
 
     MateriaAdapter materiaAdapter;
     RecyclerView rvMateria;
-    ArrayList<Materia> myArray= new ArrayList<>();
+    ArrayList<Materia> myArray = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        rvMateria=findViewById(R.id.rv_Materias);
+        rvMateria = findViewById(R.id.rv_Materias);
         traerInfo();
         materiaAdapter = new MateriaAdapter(myArray);
         materiaAdapter.setOnClickListener(new MateriaAdapter.OnClickListener() {
@@ -41,40 +41,47 @@ public class MainActivity extends AppCompatActivity {
                 traerInfo();
                 materiaAdapter.setDataSet(myArray);
             }
+
+            @Override
+            public void onClickDetalle(Materia materia) {
+                Intent myIntent = new Intent(MainActivity.this, GradesActivity.class);
+                myIntent.putExtra("idMateria",materia.getId());
+                startActivity(myIntent);
+            }
         });
 
         rvMateria.setAdapter(materiaAdapter);
         rvMateria.setLayoutManager(new LinearLayoutManager(MainActivity.this));
 
-        Button btnCuenta=findViewById(R.id.btnCuenta);
-        Button btnBackMain= findViewById(R.id.btnBackMain);
-        Button btnCredits= findViewById(R.id.btnCreditos);
-        Button btnAddSub= findViewById(R.id.btnAñadirMateria);
+        Button btnCuenta = findViewById(R.id.btnCuenta);
+        Button btnBackMain = findViewById(R.id.btnBackMain);
+        Button btnCredits = findViewById(R.id.btnCreditos);
+        Button btnAddSub = findViewById(R.id.btnAñadirMateria);
         btnCuenta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent= new Intent(MainActivity.this, ProfileActivity.class);
+                Intent myIntent = new Intent(MainActivity.this, ProfileActivity.class);
                 startActivity(myIntent);
             }
         });
         btnBackMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent2= new Intent(MainActivity.this, LoginActivity.class);
+                Intent myIntent2 = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(myIntent2);
             }
         });
         btnCredits.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent3= new Intent(MainActivity.this, CreditsActivity.class);
+                Intent myIntent3 = new Intent(MainActivity.this, CreditsActivity.class);
                 startActivity(myIntent3);
             }
         });
         btnAddSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent4= new Intent(MainActivity.this, CreateSubActivity.class);
+                Intent myIntent4 = new Intent(MainActivity.this, CreateSubActivity.class);
                 startActivity(myIntent4);
             }
         });
@@ -84,14 +91,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void traerInfo() {
 
-        FirebaseFirestore firestore= FirebaseFirestore.getInstance();
+        FirebaseFirestore firestore = FirebaseFirestore.getInstance();
         firestore.collection("Materias").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                if (task.isComplete()){
+                if (task.isComplete()) {
                     myArray.clear();
-                    for (QueryDocumentSnapshot document: task.getResult()){
-                        Materia newMateria= document.toObject(Materia.class);
+                    for (QueryDocumentSnapshot document : task.getResult()) {
+                        Materia newMateria = document.toObject(Materia.class);
                         newMateria.setId(document.getId());
                         myArray.add(newMateria);
                     }

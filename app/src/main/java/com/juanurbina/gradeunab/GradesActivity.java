@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -21,12 +22,20 @@ import java.util.ArrayList;
 public class GradesActivity extends AppCompatActivity {
     NotaAdapter notaAdapter;
     RecyclerView rvNota;
+    private double pga = 0.0;
+    private TextView txtPga;
+    private String materiaSeleccionada;
     ArrayList<Nota> myArray= new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grades);
+
+        txtPga = findViewById(R.id.txt_pga_materia);
+
+        materiaSeleccionada = getIntent().getStringExtra("idMateria");
+
         rvNota=findViewById(R.id.rvGrades);
         traerInfo();
         notaAdapter=new NotaAdapter(myArray);
@@ -35,6 +44,7 @@ public class GradesActivity extends AppCompatActivity {
             public void onClickEliminar(Nota nota) {
                 FirebaseFirestore firestore= FirebaseFirestore.getInstance();
                 firestore.collection("Notas").document(nota.getIdNota()).delete();
+                actulizarPga();
                 traerInfo();
                 notaAdapter.setDataSet(myArray);
             }
@@ -56,6 +66,7 @@ public class GradesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent2= new Intent(GradesActivity.this, CreateGradeActivity.class);
+                myIntent2.putExtra("idMateria",materiaSeleccionada);
                 startActivity(myIntent2);
             }
         });
@@ -81,13 +92,28 @@ public class GradesActivity extends AppCompatActivity {
         firestore.collection("Notas").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                myArray.clear();
                 for (QueryDocumentSnapshot document: task.getResult()){
+
                     Nota newNota= document.toObject(Nota.class);
                     newNota.setIdNota(document.getId());
-                    myArray.add(newNota);
+
+                    if(newNota.getIdMateria().equals(materiaSeleccionada)){
+                        myArray.add(newNota);
+                    }
                 }
+                actulizarPga();
+
                 notaAdapter.setDataSet(myArray);
             }
         });
+    }
+
+    public void actulizarPga(){
+        pga = 0.0;
+        for (Nota item:myArray){
+            pga += item.getPorcNota()*item.getCalifNota();
+        }
+        txtPga.setText(String.valueOf(pga));
     }
 }

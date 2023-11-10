@@ -17,10 +17,13 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class CreateGradeActivity extends AppCompatActivity {
 
+    private String materiaSeleccionada;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_grade);
+        materiaSeleccionada = getIntent().getStringExtra("idMateria");
         Button btnBackAddGrade= findViewById(R.id.btnBackAddGrad);
         Button btnAddGrade=findViewById(R.id.btnAddGrade);
         EditText txtNameGrade= findViewById(R.id.etNameGrade);
@@ -41,7 +44,7 @@ public class CreateGradeActivity extends AppCompatActivity {
                 double porcGrade= Double.parseDouble(porcNota);
                 String califNota= txtCalifGrade.getText().toString();
                 double califGrade= Double.parseDouble(califNota);
-                Nota myNota= new Nota(nameGrade,porcGrade,califGrade);
+                Nota myNota= new Nota(nameGrade,porcGrade,califGrade,materiaSeleccionada);
                 FirebaseFirestore firestore=FirebaseFirestore.getInstance();
                 firestore.collection("Notas").add(myNota).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
                     @Override
@@ -49,6 +52,7 @@ public class CreateGradeActivity extends AppCompatActivity {
                         if(task.isComplete()){
                             Toast.makeText(CreateGradeActivity.this, "Ha sido creado", Toast.LENGTH_SHORT).show();
                             Intent myIntent2= new Intent(CreateGradeActivity.this, GradesActivity.class);
+                            myIntent2.putExtra("idMateria",materiaSeleccionada);
                             startActivity(myIntent2);
                         } else{
                             Toast.makeText(CreateGradeActivity.this, "Error", Toast.LENGTH_SHORT).show();

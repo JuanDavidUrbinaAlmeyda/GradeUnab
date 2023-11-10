@@ -1,6 +1,8 @@
 package com.juanurbina.gradeunab;
 
-public class Materia {
+import java.io.Serializable;
+
+public class Materia implements Serializable {
     private String nombreMateria;
     private String id;
 

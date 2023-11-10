@@ -13,7 +13,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 
-public class MateriaAdapter extends RecyclerView.Adapter<MateriaAdapter.ViewHolder>{
+public class MateriaAdapter extends RecyclerView.Adapter<MateriaAdapter.ViewHolder> {
 
 
     ArrayList<Materia> dataSet = new ArrayList<>();
@@ -56,10 +56,14 @@ public class MateriaAdapter extends RecyclerView.Adapter<MateriaAdapter.ViewHold
 
         TextView tvName;
         Button btnEliminar;
+        Button btnDetalle;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvName = itemView.findViewById(R.id.tv_item_materia_name);
             btnEliminar = itemView.findViewById(R.id.btnItemSubDelete);
+            btnDetalle = itemView.findViewById(R.id.btn_detalle_materia);
+
         }
 
         public void enlazar(Materia item) {
@@ -68,17 +72,28 @@ public class MateriaAdapter extends RecyclerView.Adapter<MateriaAdapter.ViewHold
                 @Override
                 public void onClick(View v) {
 
-                    if (onClickListener != null){
+                    if (onClickListener != null) {
                         onClickListener.onClickEliminar(item);
                     }
 
                 }
             });
+            btnDetalle.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (onClickListener != null){
+                        onClickListener.onClickDetalle(item);
+                    }
+                }
+            });
+
         }
     }
 
 
-    interface OnClickListener{
+    interface OnClickListener {
         void onClickEliminar(Materia materia);
+
+        void onClickDetalle(Materia materia);
     }
 }

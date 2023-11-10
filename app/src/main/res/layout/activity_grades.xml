@@ -34,7 +34,7 @@
         android:textColor="@color/secundario"/>
 
     <TextView
-        android:id="@+id/textView23"
+        android:id="@+id/txt_pga_materia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -70,7 +70,7 @@
         android:text="@string/txtTasks"
         app:layout_constraintEnd_toStartOf="@+id/btnDisplayResour"
         app:layout_constraintStart_toEndOf="@+id/btnDisplayNotas"
-        app:layout_constraintTop_toBottomOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/txt_pga_materia"
         android:fontFamily="@font/aleo_bold"
         android:textSize="15sp"
         android:backgroundTint="@color/secundario"/>
