@@ -27,12 +27,19 @@ import java.io.IOException;
 public class ProfileActivity extends AppCompatActivity {
     private FirebaseFirestore db;
     private ImageView profileImg;
-
+    private Button btnBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-
+        btnBack=findViewById(R.id.btnBackProf);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent4= new Intent(ProfileActivity.this, MainActivity.class);
+                startActivity(myIntent4);
+            }
+        });
         db = FirebaseFirestore.getInstance();
         profileImg=findViewById(R.id.imgProfile);
         SharedPreferences sharedPref = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);

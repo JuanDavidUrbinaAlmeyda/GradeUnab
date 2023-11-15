@@ -6,6 +6,11 @@ public class Materia implements Serializable {
     private String nombreMateria;
     private String id;
 
+
+
+
+
+
     public String getId() {
         return id;
     }

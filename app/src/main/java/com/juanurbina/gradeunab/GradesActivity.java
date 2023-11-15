@@ -102,7 +102,9 @@ public class GradesActivity extends AppCompatActivity {
                         myArray.add(newNota);
                     }
                 }
+
                 actulizarPga();
+
 
                 notaAdapter.setDataSet(myArray);
             }

@@ -39,7 +39,7 @@ public class ResourcesActivity extends AppCompatActivity {
         btnBackReso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent= new Intent(ResourcesActivity.this, GradesActivity.class);
+                Intent myIntent= new Intent(ResourcesActivity.this, MainActivity.class);
                 startActivity(myIntent);
 
             }

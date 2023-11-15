@@ -75,7 +75,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 userData.put("semestre", sem);
                                 usuarioDocRef.set(userData).addOnSuccessListener(aVoid ->{
                                     Toast.makeText(RegisterActivity.this, "Usuario Creado", Toast.LENGTH_SHORT).show();
-                                    Intent profileIntent = new Intent(RegisterActivity.this, ProfileActivity.class);
+                                    Intent profileIntent = new Intent(RegisterActivity.this, MainActivity.class);
                                     profileIntent.putExtra("nombre", nombre);
                                     profileIntent.putExtra("apellido", apellido);
                                     profileIntent.putExtra("id", id);

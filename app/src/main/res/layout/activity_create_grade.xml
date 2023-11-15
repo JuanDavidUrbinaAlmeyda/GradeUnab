@@ -90,7 +90,7 @@
         android:textColor="@color/white"
         android:backgroundTint="@color/secundario"/>
     <Button
-        android:id="@+id/btnBackAddGrad"
+        android:id="@+id/btnBackProf"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_gravity="end"

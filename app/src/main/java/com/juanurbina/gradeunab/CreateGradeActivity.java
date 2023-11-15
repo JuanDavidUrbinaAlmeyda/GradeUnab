@@ -24,7 +24,7 @@ public class CreateGradeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_grade);
         materiaSeleccionada = getIntent().getStringExtra("idMateria");
-        Button btnBackAddGrade= findViewById(R.id.btnBackAddGrad);
+        Button btnBackAddGrade= findViewById(R.id.btnBackProf);
         Button btnAddGrade=findViewById(R.id.btnAddGrade);
         EditText txtNameGrade= findViewById(R.id.etNameGrade);
         EditText txtPorcenGrade=findViewById(R.id.etPercenGrade);

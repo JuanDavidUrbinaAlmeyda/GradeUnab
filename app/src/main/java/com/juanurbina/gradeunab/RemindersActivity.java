@@ -45,7 +45,7 @@ public class RemindersActivity extends AppCompatActivity {
         btnBackReminder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent= new Intent(RemindersActivity.this, GradesActivity.class);
+                Intent myIntent= new Intent(RemindersActivity.this, MainActivity.class);
                 startActivity(myIntent);
             }
         });
